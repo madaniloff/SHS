@@ -87,6 +87,7 @@ void delStudent(vector<Student*> *v) {
   int i = 0;
   for (it = v->begin(); it != v->end(); it++) {
     if ((*it)->id == id) {
+      delete *it;
       v -> erase(it);
       break;
     }
